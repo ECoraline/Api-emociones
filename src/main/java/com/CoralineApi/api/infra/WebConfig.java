@@ -9,10 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+        // Reemplaza "*" con el origen específico de tu frontend
         registry.addMapping("/**")
-                .allowedOrigins("*")  // Permite cualquier origen
+                .allowedOrigins("https://ecoraline.github.io/web-api-emociones/")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
-                .allowCredentials(true);
+                .allowCredentials(true); // Mantén habilitadas las credenciales
     }
 }
