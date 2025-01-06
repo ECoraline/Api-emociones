@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         // Reemplaza "*" con el origen específico de tu frontend
         registry.addMapping("/**")
-                .allowedOrigins("https://ecoraline.github.io/web-api-emociones/")
+                .allowedOrigins("https://ecoraline.github.io")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true); // Mantén habilitadas las credenciales
