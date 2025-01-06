@@ -18,7 +18,7 @@ public class ConsultaAPI {
         // Endpoint de la API de Cohere para generación de texto
         String endpoint = "https://api.cohere.ai/v1/generate";
 
-        System.out.println("Texto en la consulta: " + textoUsuario);
+        //System.out.println("Texto en la consulta: " + textoUsuario);
 
 
         // Cuerpo de la solicitud JSON
@@ -28,7 +28,7 @@ public class ConsultaAPI {
                         "prompt": "Identifica las emociones primarias en este texto: '%s' Y da una recomendación para manejar esas emociones.(respuesta en español y maximo 300 ccaracteres).",
                         "max_tokens": 301
                     }
-                """.formatted(textoUsuario);
+                """.formatted(textoUsuario.replace("\n"," "));
 
         try {
             //Configurar la conexión
